@@ -1,0 +1,1103 @@
+/* Removes all margins from the website */
+*,html,body {
+    margin:0;
+    padding:0;
+}
+
+body {
+    width: 100%;
+    min-width: 1427px;
+    height: auto;
+}
+
+header {
+    height: 80px;
+    line-height: 80px;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    /*min-width: 1427px;*/
+}
+
+footer {
+    height: 80px;
+    /* height: 150px; */
+    /* line-height: 150px; */
+    position: relative;
+    z-index: 600;
+    width: 100%;
+    min-width: 1427px;
+    background-color: #585858;
+    color: white;
+    text-align: center;
+}
+
+footer p {
+    width: 100%;
+    font-size: 16px;
+    position: absolute;
+    bottom: 0;
+}
+
+.anchor {
+    display: block;
+    height: 80px; /*same height as header*/
+    margin-top: -80px; /*same height as header*/
+    visibility: hidden;
+}
+
+.upPage {
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    /*margin-top: 45%;*/
+    z-index: 999;
+    text-align: right;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+.upPage a {
+    font-size: 45px;
+    color: #595959;
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+    background-color: #e8e8e8;
+    padding: 7px 15px 0px 15px;
+    border-radius: 100%;
+}
+
+.upPageDefault {
+    display: none;
+}
+
+.upPageSecond {
+    display: block;
+    animation: 1s ease-out 0s 1 upPageEnter;
+}
+
+@keyframes upPageEnter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes upPageEnter2 {
+  0% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.upPage a:hover {
+    animation: 1.2s ease-out 0s 1 upPageEnter2;
+    text-decoration: none;
+    background-color: gray;
+    color: white
+}
+
+.upPage a:focus {
+    outline: none;
+    text-decoration: none;
+    background-color: #595959;
+    color: white;
+}
+
+/* Created a class which is then linked to the js, where it changes the color of the navigation bar when scrolled up or down */
+.secondary 
+{
+    background-color: #e8e8e8;
+    box-shadow: 0px 0px 17px 0px;
+    transition: all 0.5s ease-in;
+}
+
+/* Header Section */
+.headerLogoSection {
+    width: 300px;
+    margin-left: 13%;
+    display: inline-block;
+}
+
+#headerRow a {
+    outline: none;
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: 'dinregular';
+    src: url('DINFont/dinregularalternate-webfont.woff2') format('woff2'),
+         url('DINFont/dinregularalternate-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+font-family: 'DIN Alternate Bold';
+font-style: normal;
+font-weight: normal;
+src: local('DIN Alternate Bold'), url('DINFont2/DINAlternate-Bold.woff') format('woff');
+}
+
+.logoText {
+    animation: 1.2s ease-out 0s 1 logoEnter;
+    position: relative;
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+    font-size: 40px;
+    font-family: DIN Alternate Bold;
+    font-style: italic;
+}
+
+@keyframes logoEnter {
+  0% {
+    transform: translateX(-180%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.default-color {
+    color: white;
+}
+
+.alternate-color {
+    color: black;
+    transition: all 0.7s ease-in;
+    text-shadow: 1px 1px grey;
+}
+
+@font-face {
+font-family: 'Kozuka Gothic Pr6N R';
+font-style: normal;
+font-weight: normal;
+src: local('Kozuka Gothic Pr6N R'), url('kozukaFont/KozGoPr6NRegular.woff') format('woff');
+} 
+
+.logoText img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+    /*font-family: Kozuka Gothic Pr6N R;
+    font-size: 34px;
+    font-weight: 420;
+    margin-left: 3px;*/
+}
+
+.navigationContainer {
+    animation: 1.2s ease-out 0s 1 navigationEnter;
+    width: 700px;
+    height: 100%;
+    float: right;
+    display: block;
+}
+
+@keyframes navigationEnter {
+  0% {
+    transform: translateX(180%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.navigationContainer nav {
+    float: left;
+    margin-left: 5%;
+}
+
+.navigationContainer ul {
+    list-style: none;
+}
+
+.navigationContainer ul li {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.navigationContainer ul li a {
+    font-family: Trebuchet MS, sans-serif;
+    font-size: 17px;
+    margin-right: 35px;
+    padding-bottom: 2px;
+    text-decoration: none;
+    color: inherit;
+    padding: 5px;
+}
+
+.alternate-colorB {
+    color: black;
+    transition: all 0.7s ease-in;
+}
+
+.navigationContainer ul li a:hover {
+    border-bottom: 2px solid black;
+    text-decoration: none;
+    text-decoration-style: none;
+    transition: all 0.3s ease-in;
+}
+
+/* Home/First Section of Body */
+.homeSection {
+    width: 100%;
+    height: 720px;
+    background-color: black;
+}
+
+#homeBackgroundContainer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#homeBackground {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    opacity: 0.3;
+}
+
+#topInformationContainer {
+    width: 80%;
+    height: 100%;
+    z-index: 8;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 8%;
+}
+
+#homeBorderContainer1 {
+    width: 350px;
+    height: 700px;
+    background-image: url('../image/Myself.png');
+    background-size: cover;
+    z-index: 8;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+#homeBorderContainer {
+    width: 650px;
+    height: 450px;
+    background-image: url('../image/border.png');
+    background-size: cover;
+    z-index: 8;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 150px;
+}
+
+#homeBorderText {
+    width: 100%;
+    height: 100%;
+    margin-top: 80px;
+    text-align: center;
+    font-family: ostrich_sansmedium;
+    color: white;
+}
+
+#homeBorderText h1 {
+    font-size: 60px;
+}
+
+#homeBorderText h1 span {
+    font-weight: 900;
+}
+
+#homeBorderText h2 {
+    margin-top: -10px;
+    font-size: 50px;
+}
+
+#homeBorderText h3 {
+    font-weight: 600;
+    letter-spacing: 5px;
+}
+
+@font-face {
+    font-family: 'ostrich_sansmedium';
+    src: url('ostrichFont/ostrich-regular-webfont.woff2') format('woff2'),
+         url('ostrichFont/ostrich-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#text-fixed {
+    display: inline-block;
+    width: 265px;
+    animation: 1.5s ease-in 0s 1 textEnter;
+} 
+
+#slider-text {
+    display: inline-block;
+    height: 90px;
+    width: 249px;
+    animation: 1.5s ease-in 0s 1 textEnter;
+    overflow-y: hidden;
+}
+
+@keyframes textEnter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#slider-text div {
+    box-sizing: border-box;
+    height: 90px;
+    margin-bottom: 10px;
+}
+
+#slider-text1 {
+    animation: slide 10s linear infinite;
+}
+
+@keyframes slide {
+    0% {margin-top: -300px;}
+    5% {margin-top: -200px;}
+    33% {margin-top: -200px;}
+    38% {margin-top: -100px;}
+    66% {margin-top: -100px;}
+    71% {margin-top: 0px;}
+    100% {margin-top: 0px;}
+}
+
+
+/* About Section */
+.aboutSection {
+    width: 100%;
+    height: 720px;
+    background-color: white;
+    background-image: url("../image/aboutMeBackground.png");
+    background-size: 100% 100%;
+    
+}
+
+#titleHeader {
+    padding-top: 20px;
+    margin-top: 0px;
+    font-family: Trebuchet MS, sans-serif;
+    font-weight: 600;
+    color: #525252;
+    text-align: center;
+    font-size: 38px;
+    animation: 1.5s ease-in 0s 1 infoEnter;
+}
+
+@keyframes infoEnter {
+  0% {
+    opacity: 0;
+    transform: translateY(200%);
+    
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@font-face {
+font-family: 'BrandybuckFont';
+font-style: normal;
+font-weight: normal;
+src: local('Brandybuck Demo'), url('BrandybuckFont/Brandybuck Demo.woff') format('woff');
+}
+
+#titleSpan {
+    font-family: BrandybuckFont;
+    font-size: 45px;
+    font-style: italic;
+    color: #a11227;
+}
+
+#aboutBody {
+    height: 620px;
+    width: 100%;
+    background-color: transparent;
+    animation: 1.5s ease-in 0s 1 aboutInfoEnter;
+    font-family: ostrich_sansmedium;
+}
+
+@keyframes aboutInfoEnter {
+    0% {
+      opacity: 0;
+      transform: translateY(15%);
+    }
+    50% {
+        opacity: 0.2;
+    }
+    80% {
+        opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+
+#aboutmeSectionContainer {
+    width: 85%;
+    height: 92%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#aboutmeSectionContainer h3 {
+    font-size: 28px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    text-decoration: underline;
+}
+
+#aboutmeSectionContainer p {
+    margin-top: -10px;
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+/* Experience Section */
+.objectiveSection {
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.9)),url(..//image/section2.jpg);
+    background-size: 100% 100%;
+    width: 100%;
+    height: 720px;
+    background-color: white;
+}
+
+.objectiveSection h1 {
+    font-family: Trebuchet MS, sans-serif;
+    margin-top: 0px;
+    padding-top: 20px;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    font-size: 38px;
+    animation: 1.5s ease-in 0s 1 infoEnter;
+}
+
+#objectContainer {
+    width: 80%;
+    height: 600px;
+    background-color: transparent;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: 1.5s ease-in 0s 1 objectInfoEnter;
+    color: white;
+    font-family: ostrich_sansmedium;
+}
+
+#objectContainer h3 {
+    letter-spacing: 3px;
+    font-weight: 900;
+    font-size: 30px;
+}
+
+#objectContainer p {
+    letter-spacing: 2px;
+    font-weight: 400;
+    font-size: 23px;
+    margin-top: 15px;
+}
+
+@keyframes objectInfoEnter {
+    0% {
+      opacity: 0;
+      transform: translateY(15%);
+    }
+    50% {
+        opacity: 0.2;
+    }
+    80% {
+        opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+
+#objectContainerTop {
+    margin: 0;
+    height: 300px;
+    width: 100%;
+    background-color: transparent;
+    position: relative;
+    padding: 0;
+}
+
+#objectContainerTop1 {
+    position: relative;
+    display: block;
+    float: left;
+    height: 100%;
+    width: 50%;
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    border-bottom: 2px #bdbdbd solid;
+    border-right: 2px #bdbdbd solid;
+    padding-right: 20px;
+}
+
+#objectContainerTop2 {
+    position: relative;
+    display: block;
+    float: right;
+    height: 100%;
+    width: 50%;
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    border-bottom: 2px #bdbdbd solid;
+    padding-left: 20px;
+}
+
+#objectContainerTop2 p {
+    font-size: 20px;
+}
+
+#objectContainerBottom {
+    margin: 0;
+    height: 300px;
+    width: 100%;
+    background-color: transparent;
+    position: relative;
+}
+
+#objectContainerBottom1 {
+    position: relative;
+    display: block;
+    float: left;
+    height: 100%;
+    width: 50%;
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    border-right: 2px #bdbdbd solid;
+    padding-right: 20px;
+}
+
+#objectContainerBottom1 p {
+    font-size: 22px;
+}
+
+#objectContainerBottom2 {
+    position: relative;
+    display: block;
+    float: right;
+    height: 100%;
+    width: 50%;
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    padding-left: 20px;
+}
+
+#objectContainerDecorBottom2 {
+    width: 90%;
+    height: 100px;
+    background-image: url("../image/computersoutline.png");
+    background-size: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Projects Section */
+.projectSection {
+    width: 100%;
+    height: 720px;
+    background-color: white;
+}
+
+.projectSection h1 {
+    font-family: Trebuchet MS, sans-serif;
+    margin-top: 0px;
+    padding-top: 20px;
+    font-weight: 600;
+    color: black;
+    text-align: center;
+    font-size: 38px;
+    animation: 1.5s ease-in 0s 1 infoEnter;
+}
+
+#projectContent {
+    width: 100%;
+    height: 600px;
+    background-color: transparent;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: 1.5s ease-in 0s 1 objectInfoEnter;
+}
+
+#projectContentTop {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 34%;
+    margin-bottom: 0%;
+    background-color: transparent;
+    text-align: center;
+    font-family: ostrich_sansmedium;
+}
+
+#projectContentTop h2 {
+    margin-right: 20%;
+    margin-left: 20%;
+    font-size: 35px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+#projectSeparator {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    /* background-color: #a11227; */
+    background-color: black;
+    font-family: Trebuchet MS, sans-serif;
+    color: white;
+    text-align: center;
+}
+
+#projectSeparator1 {
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+#projectSeparator2 {
+    margin-top: -10px;
+    font-size: 25px;
+    animation: 5s ease-in 1s infinite projectLoop;
+}
+
+@keyframes projectLoop {
+    0% {
+        opacity: 0;
+        transform: translateY(-15%);
+    }
+    30% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+
+#projectContentBottom {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 55%;
+    background-color: transparent;
+}
+
+#projectInfoContainer {
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1368px;
+    height: 320px;
+    border-radius: 10px;
+    background-color: transparent;
+    /*box-shadow: 0px 0px 17px 0px;*/
+}
+
+#projectInfoContainer ul {
+    display: inline-block;
+    list-style: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#projectInfoContainer ul li {
+    display: inline-block;
+    cursor: pointer;
+    width: 400px;
+    height: 360px;
+    background-color: white;
+    border-radius: 10px;
+    font-family: Trebuchet MS, sans-serif;
+    font-size: 17px;
+    overflow: hidden;
+}
+
+#dropchatA {
+    text-decoration: none;
+    background-color: transparent;
+}
+
+#pTitle {
+    background-color: black;
+    color: white;
+    text-align: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    cursor: pointer;
+    height: 100%;
+    opacity: 0.7;
+    font-size: 20px;
+    padding-right: 7px;
+    padding-left: 7px;
+    padding-top: 5px;
+    line-height: 1.15;
+}
+
+#pTitle span {
+    font-size: 14px;
+}
+
+#pTitle2 {
+    background-color: black;
+    color: white;
+    text-align: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    cursor: pointer;
+    height: 100%;
+    opacity: 0.7;
+    font-size: 20px;
+    padding-right: 7px;
+    padding-left: 7px;
+    padding-top: 5px;
+    line-height: 1.15;
+}
+
+#pTitle2 span {
+    font-size: 14px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+#dropchat {
+    background-image:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.2)),url(..//image/dropchat.jpg);
+    background-size: 100% 100%;
+    margin-right: 80px;
+}
+
+#dropchatApp {
+    background-image:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.2)),url(..//image/dropchatApp.jpg);
+    background-size: 100% 100%;
+}
+
+#flappyBird {
+    background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.2)),url(..//image/flappyBird.jpg);
+    background-size: 100% 100%;
+    margin-left: 80px;
+}
+
+
+/* Skills Section */
+.skillsSection {
+    width: 100%;
+    height: 720px;
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.9)),url(..//image/skillsSectionBackground.jpg);
+    background-size: cover;
+    background-color: white;
+}
+
+#skillsHeader {
+    padding-top: 20px;
+    margin-top: 0px;
+    font-family: Trebuchet MS, sans-serif;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    font-size: 38px;
+    animation: 1.5s ease-in 0s 1 infoEnter;
+}
+
+#skillsBody {
+    height: 620px;
+    width: 100%;
+    background-color: transparent;
+    animation: 1.5s ease-in 0s 1 aboutInfoEnter;
+    font-family: ostrich_sansmedium;
+}
+
+#centerImageSkills {
+    width: 80px;
+    height: 80px;
+    background-color: black;
+    border-radius: 100%;
+    border: 3px solid white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -20px;
+    overflow: hidden;
+    background-size: cover;
+}
+
+#centerImageSkills img {
+    width: 70%;
+    height: 70%;
+    margin-top: 11px;
+}
+
+#centerImageSkillsBot {
+    width: 80px;
+    height: 80px;
+    background-color: black;
+    border: 3px solid white;
+    border-radius: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+
+#centerImageSkillsBot img {
+    width: 100%;
+    height: 100%;
+}
+
+#skillsTop {
+    height: 280px;
+    width: 100%;
+    margin-top: 45px;
+    background-color: transparent;
+}
+
+#skillsTopOne {
+    height: 100%;
+    background-color: transparent;
+    color: white;
+    text-align: center;
+    font-size: 23px;
+    letter-spacing: 2px;
+}
+
+#skillsTopTwo {
+    height: 100%;
+    background-color: transparent;
+    color: white;
+    text-align: center;
+    font-size: 23px;
+    letter-spacing: 2px;
+}
+
+#skillsTopThree {
+    height: 100%;
+    background-color: transparent;
+    color: white;
+    text-align: center;
+    font-size: 21px;
+    letter-spacing: 2px;
+}
+
+#skillsBottom {
+    height: 310px;
+    width: 100%;
+    margin-top: 5px;
+    background-color: transparent;
+}
+
+#skillsBottomTwo {
+    height: 100%;
+    background-color: transparent;
+    float: none;
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+    font-size: 18.5px;
+    letter-spacing: 2px;
+}
+
+#centerTextSkillsTop {
+    margin-top: 15px;
+}
+
+
+/* More Section */
+.moreSection {
+    width: 100%;
+    height: 720px;
+    background-color: white;
+}
+
+#moreHeader {
+    padding-top: 20px;
+    margin-top: 0px;
+    font-family: Trebuchet MS, sans-serif;
+    font-weight: 600;
+    color: #525252;
+    text-align: center;
+    font-size: 38px;
+    animation: 1.5s ease-in 0s 1 infoEnter;
+}
+
+#moreBody {
+    height: 620px;
+    width: 100%;
+    background-color: transparent;
+    animation: 1.5s ease-in 0s 1 aboutInfoEnter;
+    font-family: ostrich_sansmedium;
+}
+
+#moreBodyH1 {
+    width: 80%;
+    padding-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 35px;
+    letter-spacing: 2px;
+}
+
+#morePortfolio {
+    width: 100%;
+    height: 70px;
+    background-color: transparent;
+}
+
+#morePortfolioLinks {
+    height: 100%;
+    width: 160px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: transparent;
+}
+
+#morePortfolioGithub {
+    width: 70px;
+    height: 100%;
+    background-color: transparent;
+    display: inline-block;
+    margin-right: 10px;
+    margin-left: 4px;
+    overflow: hidden;
+}
+
+#morePortfolioGithub a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#morePortfolioLinkedIn {
+    width: 70px;
+    height: 100%;
+    background-color: transparent;
+    display: inline-block;
+    overflow: hidden;
+}
+
+#morePortfolioLinkedIn a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#moreSocial {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#moreSocialContainer {
+    width: 100%;
+    height: 70px;
+    background-color: transparent;
+}
+
+#moreSocialLinks {
+    height: 100%;
+    width: 240px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: transparent;
+}
+
+#moreSocialFacebook {
+    width: 70px;
+    height: 100%;
+    background-color: transparent;
+    display: inline-block;
+    margin-right: 10px;
+    margin-left: 4px;
+    overflow: hidden;
+}
+
+#moreSocialFacebook a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#moreSocialInstagram {
+    width: 70px;
+    height: 100%;
+    background-color: transparent;
+    display: inline-block;
+    overflow: hidden;
+}
+
+#moreSocialInstagram a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#moreSocialWechat {
+    width: 70px;
+    height: 100%;
+    background-color: transparent;
+    display: inline-block;
+    overflow: hidden;
+    margin-left: 7px;
+}
+
+#moreSocialWechat a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#moreOnMore {
+    margin-top: 50px;
+}
+
+#moreOnMore h1 {
+    text-align: center;
+}
+
+#moreOnMore h1 span {
+    font-weight: 900;
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+

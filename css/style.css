@@ -1,0 +1,340 @@
+/* Removes all margins from the website */
+*,html,body
+{
+  margin:0;
+  padding:0;
+}
+
+body
+{
+    height: 3000px;
+}
+
+/* Adds header background color and a height for the header */
+header
+{
+  height: 80px;
+  line-height: 80px;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+}
+
+/* Created a class which is then linked to the js, where it changes the color of the navigation bar when scrolled up or down */
+.secondary
+{
+    background-color: dodgerblue;
+    box-shadow: 0px 0px 17px 0px;
+    transition: all 0.5s ease-in;
+}
+
+/* Removes all style for the list (Bullet points in the case) */
+ul
+{
+  list-style: none;
+}
+
+/* Makes all the ul li to be displayed in a single line blocked */
+ul li
+{
+  display: inline-block;
+}
+
+/* Floats all content from nav to the right side of the page */
+header nav
+{
+  float: right;
+}
+
+/* Adds a margin to center the image in the header */
+.logo img
+{
+    margin-top: 0px;
+    width: 20%;
+    height: 70px;
+}
+
+/* Changes the style of the navigation texts and adds an animation */
+header nav ul li a
+{
+  padding-right: 30px;
+  font-weight: bold;
+  color: white;
+  transition: all 0.2s ease-in;
+}
+
+/* Adds style when mouse hovers through the navigation */
+header nav ul li a:hover
+{
+  text-decoration: none;
+  color: #FFE4B5;
+}
+
+/* Imports the 1st image for the slider in the navigation section */
+.img1
+{
+  background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.9)),url(..//image/slider1.jpg);
+  background-size: 100% 100%;
+}
+
+/* Code to edit the texts and the contents in the (li) on the navigation section */
+.slider, .slider ul, .slider ul li
+{
+    height: 710px;
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+
+/* Edits the heading(h2) of the navigation bar */
+.slider h2
+{
+    font-weight: bold;
+    margin-top: 250px;
+}
+
+/* Changes style of the content inside the span section of the navigation section, image slider more specifically */
+.slider span
+{
+    color:crimson;
+}
+
+/* Edits in this case the spacing of the (a) which are buttons in this part of the code */
+.slider a
+{
+    padding: 10px 40px;
+    margin-right: 10px;
+}
+
+/* Edits the style of one of the buttons located at the navigation area */
+.slider a.btn-half
+{
+    background-color: dodgerblue;
+    color: white;
+    transition: 0.2s ease-in;
+}
+
+/* Changes the style when the mouse hovers over one of the buttons */
+.slider a.btn-half:hover
+{
+    background-color:darkblue;
+}
+
+/* Edits the style of one of the buttons located at the navigation area */
+.slider a.btn-full
+{
+    background-color: crimson;
+    color:white;
+    transition: 0.2s ease-in;
+}
+
+/* Changes the style when the mouse hovers over one of the buttons */
+.slider a.btn-full:hover
+{
+    background-color: darkred;
+}
+
+/* Imports the 2nd image for the slider in the navigation section */
+.img2
+{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.9)),url(..//image/slider2.jpg);
+    background-size: 100% 100%;
+}
+
+/* Imports the 3rd image for the slider in the navigation section */
+.img3
+{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.9)),url(..//image/slider3.jpg);
+    background-size: 100% 100%;
+}
+
+/* Edits the style for the font icons (FONTAWESOME) */
+.slider i
+{
+    font-size: 37px;
+    margin-right: 10px;
+}
+
+/* Edits the style of the intro area */
+.intro-area
+{
+    position: relative;
+    padding: 35px 0px;
+    text-align: center;
+}
+
+/* Edits the text attributes on the intro area */
+.sub-heading
+{
+    position: relative;
+    margin-bottom: 75px;
+}
+
+/* Adds and edits the style of the line that separates the text of the intro area with animation */
+.sub-heading:before
+{
+    content:"";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -3%;
+    width: 6%;
+    height: 1px;
+    background-color: dodgerblue; 
+    z-index: 1;
+    -webkit-transition: 0.3s ease;
+    -moz-transition: 0.3s ease;
+    -ms-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    transition: 0.3s ease;
+}
+
+/* Edits the size of when hovered the mouse over the line of separation */
+.sub-heading:hover:before
+{
+    width: 24%;
+    margin-left: -12%;
+}
+
+/* Adds and edits the grey line of the separation line when is not hovered */
+.sub-heading:after
+{
+    content:""; 
+    position:absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -12%;
+    width: 24%;
+    height: 1px;
+    background-color: #e1e1e1;
+}
+
+/* Edits the style of the text below the heading in the intro area */
+.sub-heading p
+{
+    color: #818181;
+    display: inline-block;
+    padding: 0px 0px 20px;
+    position: relative;
+    line-height: 24px;
+    letter-spacing: 0.025em;
+}
+
+/* Edits the style inside the class intro block of the intro area, news box */
+.intro-block
+{
+    position: relative;
+    background-color: #f7f7f7;
+    margin: 50px 0px 0px;
+    text-align: center;
+    padding: 70px 25px 40px;
+}
+
+/* Edits style when mouse hover over the block */
+.intro-block:hover, .intro-block.active
+{
+    background-color: dodgerblue;
+}
+
+/* Adds transition effect when hovered over the block */
+.intro-block:hover
+{
+    transition: 0.6s ease;
+    -webkit-transition: 0.6s ease;
+    -moz-transition: 0.6s ease;
+    -o-transition: 0.6s ease;
+    -ms-transition: 0.6s ease;
+}
+
+/* Edits the Font Icon position in the intro block */
+.intro-block .intro-icon
+{
+    position: absolute;
+    top: -31px;
+    left: 50%;
+    margin-left: -31px;
+}
+
+/* Adds and edit the style and the circle border around the font icon in the intro block area */
+.intro-block .fas
+{
+    width: 63px;
+    height: 62px;
+    font-size: 30px;
+    color: white;
+    line-height: 2;
+    background: dodgerblue;
+    border-radius: 50%;
+    box-shadow: 0px 0px 0px 10px #CCEEF9;
+}
+
+/* Edits the style of the font icons when the mouse hovers over the intro block */
+.intro-block:hover .fas, .intro-block.active .fas
+{
+    background: white;
+    color: dodgerblue;
+    box-shadow: 0px 0px 0px 10px dodgerblue; 
+}
+
+/* Edits the style of the heading text inside the intro block */
+.intro-block h3
+{
+    font-size: 18px;
+    color: dodgerblue;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+/* Edits the color of the paragraph text inside the intro block */
+.intro-block p
+{
+    color: #505050;
+}
+
+/* Edits the font inside the block when hovered over it */
+.intro-block:hover h3, .intro-block:hover p
+{
+    color: #f6f6f6;
+}
+
+/* Add image background in the section after the intro block */
+.feature-area
+{
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(..//image/wfimage.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+/* Edit the heading of the section after the intro block */
+.title h2, p
+{
+    color:white;
+}
+
+/* Edit the style of the h3 of the section after intro block */
+.single-feature h3
+{
+    color: white;
+}
+
+
+.single-feature
+{
+    position: relative;
+    width: 325px;
+    margin-top: -50px;
+    margin-right: -123px;
+    margin-bottom: 30px;
+    margin-left: 100px;
+    float: right;
+    padding: 25px 30px;
+    text-align: center;
+    border-right: 1px solid dodgerblue;
+    
+}
+
+
+
+
